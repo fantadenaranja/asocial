@@ -1,0 +1,7 @@
+* permalinks para los posts.
+* controlar quien te sigue mejor, no solo con una url del nodo. ha de comprobar el nick y quitar / del final de una url.
+* limitar los posts a 300 caracters
+* limitar cuando crece mucho los ficheros timeline.txt y posts.txt sistema rotar ficheros.
+
+* Si alguien publica con ; se descuringa el tema &#59; se pueden cambiar los separadores
+* gestionar followers, limitar un numero maximo y poder borrar.

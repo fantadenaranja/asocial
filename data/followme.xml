@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<rss version="2.0">
+	<channel>
+		<title>Hacking around</title>
+		<link>http://localhost</link>
+		<description>fanta feed rss asocial Hacking around network</description>
+		<language>es-es</language>
+		<pubDate>Saturday 12th of October 2013 03:05:36 PM</pubDate>
+		<lastBuildDate>Saturday 12th of October 2013 03:05:36 PM</lastBuildDate>
+		<webMaster>fanta@hackingaround.net</webMaster>
+		<item>
+			<title>fanta Saturday 12th of October 2013 03:05:36 PM</title>
+			<link>http://localhost</link>
+			<description>zapatero</description>
+			<pubDate>Saturday 12th of October 2013 03:05:36 PM</pubDate>
+			<guid>item573</guid>
+		</item>
+	</channel>
+</rss>

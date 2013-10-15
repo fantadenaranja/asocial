@@ -54,6 +54,7 @@
               <li class="active"><a href="index.php"><img src="ico/16px/16_home.png"></a></li>
               <li><a href="timeline.php"><img src="ico/16px/16_comments.png"></a></li>
               <li><a href="friends.php"><img src="ico/16px/16_users.png"></a></li>
+              <li><?php	if (!isset($_SESSION["id"])){ echo "<a href=\"login.php\"><img src=\"ico/16px/16_key.png\"></a></li>"; }else{	echo "<a href=\"index.php?out\"><img src=\"ico/16px/16_logout.png\"></a></li>"; } ?>
               <li><a href="addnode.php"><img src="ico/16px/16_server.png"></a></li>
             </ul>
           </div><!--/.nav-collapse -->

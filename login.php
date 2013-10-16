@@ -5,7 +5,7 @@
 	if (isset($_POST["key"])) { # Determine if a variable is set and is not NULL
 		if (empty($_POST["key"])) { # Determine if is either 0, empty, or not set at all
 		}else{
-			$_POST["key"] = substr($_POST['key'], 0, 75); # set limit to 75 characters		
+			$_POST["key"] = substr($_POST['key'], 0, 50); # set limit to 50 characters		
 			if ($_POST["key"] == "zapatero") {
 				session_start();
 				if (!isset($_SESSION["id"])){
@@ -96,6 +96,16 @@
     <script src="js/bootstrap-collapse.js"></script>
     <script src="js/bootstrap-carousel.js"></script>
     <script src="js/bootstrap-typeahead.js"></script>	
+
+	<script type="text/JavaScript">
+		$(document).ready(function (){
+			$('#appendedInputButton').keyup( function() {
+			var $this = $(this);
+			if($this.val().length > 50)
+			$this.val($this.val().substr(0, 50));			
+			});
+		});
+	</script> 
 
 
 </body>

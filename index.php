@@ -210,7 +210,10 @@
 			}
 			$numerolineas--;
 		}
-		echo "<tr><td align=\"left\">&nbsp;</td><td align=\"left\" width=\"100%\"><p align=\"center\"><a href=\"#\"><img src=\"ico/16px/16_refresh.png\"> Cargar más</a></p></td></tr>";
+		if ($numerolineas > 0) { # show link to load more if we really have more posts
+			echo "<tr><td align=\"left\">&nbsp;</td><td align=\"left\" width=\"100%\"><p align=\"center\"><a href=\"#\"><img src=\"ico/16px/16_refresh.png\"> Cargar más</a></p></td></tr>";
+		}else{
+		}
 		echo "</table>";
 		?>		
 

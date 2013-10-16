@@ -1,3 +1,6 @@
 git clone https://github.com/fantadenaranja/asocial
 cd asocial
 chmod -R 775 data
+
+Congigurar fichero asocial.conf metiendo solamente un nick, un email y el titulo.
+cambiar el avatar de 64x64px por otro avatar de 64x64px en formato png

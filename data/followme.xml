@@ -5,14 +5,14 @@
 		<link>http://localhost</link>
 		<description>User feed rss asocial Asocial node title network</description>
 		<language>es-es</language>
-		<pubDate>Wednesday 16th of October 2013 05:26:41 PM</pubDate>
-		<lastBuildDate>Wednesday 16th of October 2013 05:26:41 PM</lastBuildDate>
+		<pubDate>Wednesday 16th of October 2013 05:32:26 PM</pubDate>
+		<lastBuildDate>Wednesday 16th of October 2013 05:32:26 PM</lastBuildDate>
 		<webMaster>username@domain.com</webMaster>
 		<item>
-			<title>User Wednesday 16th of October 2013 05:26:41 PM</title>
+			<title>User Wednesday 16th of October 2013 05:32:26 PM</title>
 			<link>http://localhost</link>
-			<description>esto parece que chuta si si si nos vamos a madríd y ahora puedo poner un ; y otro; y otro :) sin problema</description>
-			<pubDate>Wednesday 16th of October 2013 05:26:41 PM</pubDate>
+			<description>bien, ya se puede escribir tranquilamente. Si se escribe el caracter delimitador no entrará jamas por estos parajes</description>
+			<pubDate>Wednesday 16th of October 2013 05:32:26 PM</pubDate>
 			<guid>item573</guid>
 		</item>
 	</channel>

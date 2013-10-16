@@ -22,7 +22,7 @@
 
 				while($i!=0){
 					$row = $lines[$i];
-					$text = explode(";",$row);
+					$text = explode("|",$row);
 					if ($text[0] == $_GET[ping]) { # checking if is a follower url
 						$title_xml="$text[1]";
 						$nick_xml="$text[3]";
@@ -57,7 +57,7 @@
 
 					while($i!=$other){
 						$row = $li[$i];
-						$tex = explode(";",$row);
+						$tex = explode("|",$row);
 						$i--;
 						if ($tex["2"]==$date_xml) {
 							$equo++;
@@ -67,7 +67,7 @@
 					if ($equo == 0) {
 						$writet = fopen('./data/timeline.txt',"a");
 						$tdate=date('l jS \of F Y h:i:s A'); # Pub date
-						fwrite($writet,"$nick_xml;$tdate;$date_xml;$title_xml;$remote_url\n"); # writing timeline
+						fwrite($writet,"$nick_xml|$tdate|$date_xml|$title_xml|$remote_url\n"); # writing timeline
 						fclose($writet);
 					}		
 				}
@@ -102,7 +102,7 @@
 				$cspost = md5($_POST["p"]);
 				
 				$pdate=date('l jS \of F Y h:i:s A'); # Pub date
-				fwrite($writep,"$nick;$pdate;$_POST[p];$cspost\n"); # writing post
+				fwrite($writep,"$nick|$pdate|$_POST[p]|$cspost\n"); # writing post
 				fclose($writep);
 				if (file_exists($rss_file)) { # Determine if the file exists
 					$writer = fopen($rss_file,"w"); # Opening file to write inside
@@ -116,7 +116,7 @@
 				$i=$nlin;
 				while($i!=0){
 					$row = $lin[$i];
-					$textu = explode(";",$row);
+					$textu = explode("|",$row);
 					$update_timeline = file_get_contents($textu[0]."/index.php?ping=$url"); # ping update
 					$i--;
 				}
@@ -206,7 +206,7 @@
 		
 		while($numerolineas>$postpag && $numerolineas!=0){
 			$row = $lineas[$numerolineas];
-			$texto = explode(";",$row);
+			$texto = explode("|",$row);
 			if (empty($texto[0])) { 
 			}else{
 				echo "<tr><td align=\"left\"><img src=\"avatar.jpg\" class=\"img-rounded\"></td><td align=\"left\" width=\"100%\"><blockquote align=\"left\">$texto[2]<small><a href=\"$url\">$texto[0]</a> $texto[1] <a href=\"#$texto[3]\" title=\"MD5 checksum: $texto[3]\"><b> #</b></a></small></blockquote></td></tr>";

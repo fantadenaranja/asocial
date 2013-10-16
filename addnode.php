@@ -52,7 +52,7 @@
 
 					while($i!=0){
 						$row = $lines[$i];
-						$text = explode(";",$row);
+						$text = explode("|",$row);
 						if ($text[1] == $title2[1] && $text[2] == $email2[1] && $text[3] == $nick2[1]) {
 							$counter++;
 						}
@@ -60,7 +60,7 @@
 					}
 					
 					if ($counter == 0) {
-						fwrite($writea,"$_POST[a];$title2[1];$email2[1];$nick2[1];$feed2\n"); # writing node
+						fwrite($writea,"$_POST[a]|$title2[1]|$email2[1]|$nick2[1]|$feed2\n"); # writing node
 						echo "<p class=\"text-success\" align=\"center\">Asocial node $title2[1] of $nick2[1] ($email2[1]) successfully added like follower</p>";
 						fclose($writea); # clossing file
 					}else{

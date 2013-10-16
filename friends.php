@@ -68,7 +68,7 @@
 
 		while($i!=0){
 			$row = $lineas[$i];
-			$texto = explode(";",$row);
+			$texto = explode("|",$row);
 
 			echo "<a href=\"$texto[0]\" alt=\"$texto[3]\" title=\"$texto[3] - $texto[1]\"><img src=\"$texto[0]/avatar.jpg\" class=\"img-rounded\"> </a>";
 

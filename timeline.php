@@ -69,7 +69,7 @@
 		
 		while($numerolineas>$postpag && $numerolineas!=0){
 			$row = $lineas[$numerolineas];
-			$texto = explode(";",$row);
+			$texto = explode("|",$row);
 			if (empty($texto[0])) { 
 			}else{
 				echo "<tr><td align=\"left\"><a href=\"$texto[4]\"><img src=\"$texto[4]/avatar.jpg\" class=\"img-rounded\" title=\"$texto[3]\"></a></td><td align=\"left\" width=\"100%\"><blockquote align=\"left\">$texto[2]<small><a href=\"$texto[4]\">$texto[0]</a> $texto[1]</small></blockquote></td></tr>";

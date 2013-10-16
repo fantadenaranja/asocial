@@ -1,8 +1,6 @@
 * Nada más hacer login el usuario no tendría que esperar 60 segundos para poder postear.
 * permalinks para los posts.
-* controlar quien te sigue mejor, no solo con una url del nodo. ha de comprobar el nick y quitar / del final de una url.
 * limitar los posts a 300 caracters
 * limitar cuando crece mucho los ficheros timeline.txt y posts.txt sistema rotar ficheros.
-* Solucionar problemas de que followers.txt se quede en blanco y pete.
 * Si alguien publica con ; se descuringa el tema &#59; se pueden cambiar los separadores
 * gestionar followers, limitar un numero maximo y poder borrar.

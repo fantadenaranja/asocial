@@ -1,1 +1,2 @@
 
+http://127.0.0.1;Asocial node title;username@domain.com;User;http://127.0.0.1/data/followme.xml

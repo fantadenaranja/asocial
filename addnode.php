@@ -64,7 +64,7 @@
 						echo "<p class=\"text-success\" align=\"center\">Asocial node $title2[1] of $nick2[1] ($email2[1]) successfully added like follower</p>";
 						fclose($writea); # clossing file
 					}else{
-						echo "<p class=\"text-error\" align=\"center\">Currently you are a follower</p>";
+						echo "<p class=\"text-error\" align=\"center\">Currently this node is a follower</p>";
 					}
 				}
 				fclose($handle);	

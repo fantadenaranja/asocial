@@ -6,4 +6,3 @@
 * Solucionar problemas de que followers.txt se quede en blanco y pete.
 * Si alguien publica con ; se descuringa el tema &#59; se pueden cambiar los separadores
 * gestionar followers, limitar un numero maximo y poder borrar.
-* Controlar como se muestran los posts. Ahora mismo eso peta si no se tienen ninguno en posts.txt y no es correcto en timeline.php ya que si esta vacio muestra los avatares.

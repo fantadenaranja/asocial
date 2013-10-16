@@ -1,4 +1,3 @@
-* Nada más hacer login el usuario no tendría que esperar 60 segundos para poder postear.
 * permalinks para los posts.
 * limitar los posts a 300 caracters
 * limitar cuando crece mucho los ficheros timeline.txt y posts.txt sistema rotar ficheros.

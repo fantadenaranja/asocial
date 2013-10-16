@@ -84,6 +84,7 @@
 				$timenow=time();
 				$time_last_pub=$_SESSION["time"];
 				$status_time=$timenow - $time_last_pub;
+				$status_time=$status_time + 61; # Is the first post, you dont need wait 60 seconds
 			}else{
 				$timenow=time();
 				$time_last_pub=$_SESSION["time"];

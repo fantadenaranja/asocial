@@ -1,1 +1,2 @@
 
+http://localhost;Asocial node title;username@domain.com;User;http://localhost/data/followme.xml

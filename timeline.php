@@ -2,16 +2,6 @@
 	session_start();
 	require_once("asocial.conf"); # Reading config file
 	date_default_timezone_set('UTC+1'); # Set default time zone. Ex: UTC for UK, UTC+1 for Spain
-	
-	#$li=file('./data/followers.txt');
-	#$nli=count($li);
-	#$i=$nli;
-	#while($i!=0){
-	#	$row = $li[$i];
-	#	$textus = explode(";",$row);
-	#	$update_timeline = file_get_contents($textus[0]."/index.php?ping=$url"); # ping update
-	#	$i--;
-	#}
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="es" dir="ltr" lang="es">
@@ -73,23 +63,23 @@
 		<?php
 		$lineas=file('./data/timeline.txt');
 		$numerolineas=count($lineas);
-		$i=$numerolineas;
-		$i--;
-		$counter=20;
+		$postpag=$numerolineas-10; # post on timeline per page
 		
 		echo "<table align=\"left\" width=\"100%\">";
 		
-		while($i!=0){
-			$row = $lineas[$i];
+		while($numerolineas>$postpag && $numerolineas!=0){
+			$row = $lineas[$numerolineas];
 			$texto = explode(";",$row);
-			echo "<tr><td align=\"left\"><a href=\"$texto[4]\"><img src=\"$texto[4]/avatar.jpg\" class=\"img-rounded\" title=\"$texto[3]\"></a></td><td align=\"left\" width=\"100%\"><blockquote align=\"left\">$texto[2]<small><a href=\"$texto[4]\">$texto[0]</a> $texto[1]</small></blockquote></td></tr>";
-			$counter--;
-			if ($counter == 0) {
-				exit();
+			if (empty($texto[0])) { 
+			}else{
+				echo "<tr><td align=\"left\"><a href=\"$texto[4]\"><img src=\"$texto[4]/avatar.jpg\" class=\"img-rounded\" title=\"$texto[3]\"></a></td><td align=\"left\" width=\"100%\"><blockquote align=\"left\">$texto[2]<small><a href=\"$texto[4]\">$texto[0]</a> $texto[1]</small></blockquote></td></tr>";
 			}
-			$i--;
+			$numerolineas--;
 		}
-
+		if ($numerolineas > 0) { # show link to load more if we really have more posts
+			echo "<tr><td align=\"left\">&nbsp;</td><td align=\"left\" width=\"100%\"><p align=\"center\"><a href=\"#\"><img src=\"ico/16px/16_refresh.png\"> Cargar más</a></p></td></tr>";
+		}else{
+		}
 		echo "</table>";
 
 		?>		

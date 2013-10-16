@@ -222,6 +222,7 @@
 
     </div> <!-- /container -->
 
+
     <script src="js/jquery.js"></script>
     <script src="js/bootstrap-transition.js"></script>
     <script src="js/bootstrap-alert.js"></script>
@@ -235,6 +236,16 @@
     <script src="js/bootstrap-collapse.js"></script>
     <script src="js/bootstrap-carousel.js"></script>
     <script src="js/bootstrap-typeahead.js"></script>	
+
+	<script type="text/JavaScript">
+		$(document).ready(function (){
+			$('#appendedInputButton').keyup( function() {
+			var $this = $(this);
+			if($this.val().length > 200)
+			$this.val($this.val().substr(0, 200));			
+			});
+		});
+	</script> 
 
 
 </body>

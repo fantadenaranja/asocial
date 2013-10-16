@@ -196,29 +196,22 @@
 		}
 		$lineas=file('./data/posts.txt');
 		$numerolineas=count($lineas);
-		$i=$numerolineas;
-		$i--;
-		$counter=10;
+		$postpag=$numerolineas-10; # post per page
+		
 		
 		echo "<table align=\"left\" width=\"100%\">";
 		
-		while($i!=0){
-			$row = $lineas[$i];
+		while($numerolineas>$postpag && $numerolineas!=0){
+			$row = $lineas[$numerolineas];
 			$texto = explode(";",$row);
-			if ($i == $numerolineas) {
+			if (empty($texto[0])) { 
+			}else{
 				echo "<tr><td align=\"left\"><img src=\"avatar.jpg\" class=\"img-rounded\"></td><td align=\"left\" width=\"100%\"><blockquote align=\"left\">$texto[2]<small><a href=\"$url\">$texto[0]</a> $texto[1]</small></blockquote></td></tr>";
 			}
-			echo "<tr><td align=\"left\"><img src=\"avatar.jpg\" class=\"img-rounded\"></td><td align=\"left\" width=\"100%\"><blockquote align=\"left\">$texto[2]<small><a href=\"$url\">$texto[0]</a> $texto[1]</small></blockquote></td></tr>";
-			$counter--;
-			if ($counter == 0) {
-				exit();
-			}
-			$i--;
+			$numerolineas--;
 		}
-
+		echo "<tr><td align=\"left\">&nbsp;</td><td align=\"left\" width=\"100%\"><p align=\"center\"><a href=\"#\"><img src=\"ico/16px/16_refresh.png\"> Cargar más</a></p></td></tr>";
 		echo "</table>";
-
-
 		?>		
 
     </div> <!-- /container -->

@@ -4,3 +4,5 @@
 * Si alguien publica con ; se descuringa el tema &#59; se pueden cambiar los separadores
 * gestionar followers, limitar un numero maximo y poder borrar.
 * si la url que se añade tiene / al final entra y es un jaleo luego. Se ha de controlar que de la url metida la / al final no se permita o se limpie
+* comprobar si existen ficheros o se tiene acceso a ellos. A todos los del directorio data.
+* hacer que el proceso de login, la clave este cifrada y al mismo tiempo no se pueda hacer fuerza bruta ataque.

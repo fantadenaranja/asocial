@@ -198,7 +198,7 @@
 		$numerolineas=count($lineas);
 		$i=$numerolineas;
 		$i--;
-		$counter=20;
+		$counter=10;
 		
 		echo "<table align=\"left\" width=\"100%\">";
 		

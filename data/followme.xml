@@ -1,18 +1,18 @@
 <?xml version="1.0"?>
 <rss version="2.0">
 	<channel>
-		<title>Hacking around</title>
+		<title>Asocial node title</title>
 		<link>http://localhost</link>
-		<description>fanta feed rss asocial Hacking around network</description>
+		<description>User feed rss asocial Asocial node title network</description>
 		<language>es-es</language>
-		<pubDate>Saturday 12th of October 2013 03:05:36 PM</pubDate>
-		<lastBuildDate>Saturday 12th of October 2013 03:05:36 PM</lastBuildDate>
-		<webMaster>fanta@hackingaround.net</webMaster>
+		<pubDate>Tuesday 15th of October 2013 02:35:41 PM</pubDate>
+		<lastBuildDate>Tuesday 15th of October 2013 02:35:41 PM</lastBuildDate>
+		<webMaster>username@domain.com</webMaster>
 		<item>
-			<title>fanta Saturday 12th of October 2013 03:05:36 PM</title>
+			<title>User Tuesday 15th of October 2013 02:35:41 PM</title>
 			<link>http://localhost</link>
-			<description>zapatero</description>
-			<pubDate>Saturday 12th of October 2013 03:05:36 PM</pubDate>
+			<description>hello world</description>
+			<pubDate>Tuesday 15th of October 2013 02:35:41 PM</pubDate>
 			<guid>item573</guid>
 		</item>
 	</channel>

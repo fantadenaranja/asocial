@@ -1,2 +1,3 @@
 
 http://localhost;Asocial node title;username@domain.com;User;http://localhost/data/followme.xml
+http://rms.mepone.net;El rincón de RMS;rms@fsf.org;rms;http://rms.mepone.net/data/followme.xml

@@ -3,3 +3,4 @@ User;Wednesday 16th of October 2013 03:12:49 PM;guardando el tema y ahora a ver 
 User;Wednesday 16th of October 2013 03:15:39 PM;vale, se supone esto tiene un checksum;Asocial node title;http://localhost
 User;Wednesday 16th of October 2013 03:21:08 PM;el checksum podria formar parte del permalink. fechadepublicacion+hashmd5 identifican a cada post. Pero no. mejor no, es tonteria;Asocial node title;http://localhost
 User;Wednesday 16th of October 2013 03:29:03 PM;Ok. vamos a ver si ahora se puede publicar el tema :). quiero que esto ahora despues tenga ya por fin un id del post. eso será la propia fecha y al visitarse se verá en solitario.;Asocial node title;http://localhost
+User;Wednesday 16th of October 2013 03:50:02 PM;es bueno para ti. pero que cojones pasa con timeline que no se ven las cosas y en local si !!!!!!. no entender que ocurrir. ;Asocial node title;http://localhost

@@ -16,7 +16,7 @@
 				if ($handle === false) {
 					echo "<p class=\"text-error\" align=\"center\">$_POST[a] is not a asocial node url</p>";
 				}else{
-					$_POST["a"];
+					$_POST["a"] = substr($_POST['a'], 0, 75); # set limit to 75 characters	
 					$writea = fopen($followers,"a"); # opening followers file with a mode 
 					$_POST["a"]= eregi_replace("[\n|\r|\n\r]", ' ', $_POST["a"]); # removing shit
 					$_POST["a"] = preg_replace('/\s+/', ' ', $_POST["a"]); # removing shit
@@ -155,6 +155,15 @@
     <script src="js/bootstrap-carousel.js"></script>
     <script src="js/bootstrap-typeahead.js"></script>	
 
+	<script type="text/JavaScript">
+		$(document).ready(function (){
+			$('#appendedInputButton').keyup( function() {
+			var $this = $(this);
+			if($this.val().length > 75)
+			$this.val($this.val().substr(0, 75));			
+			});
+		});
+	</script>
 
 </body>
 </html>

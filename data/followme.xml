@@ -5,14 +5,14 @@
 		<link>http://localhost</link>
 		<description>User feed rss asocial Asocial node title network</description>
 		<language>es-es</language>
-		<pubDate>Wednesday 16th of October 2013 02:41:56 PM</pubDate>
-		<lastBuildDate>Wednesday 16th of October 2013 02:41:56 PM</lastBuildDate>
+		<pubDate>Wednesday 16th of October 2013 03:21:08 PM</pubDate>
+		<lastBuildDate>Wednesday 16th of October 2013 03:21:08 PM</lastBuildDate>
 		<webMaster>username@domain.com</webMaster>
 		<item>
-			<title>User Wednesday 16th of October 2013 02:41:56 PM</title>
+			<title>User Wednesday 16th of October 2013 03:21:08 PM</title>
 			<link>http://localhost</link>
-			<description>aadfas</description>
-			<pubDate>Wednesday 16th of October 2013 02:41:56 PM</pubDate>
+			<description>el checksum podria formar parte del permalink. fechadepublicacion+hashmd5 identifican a cada post. Pero no. mejor no, es tonteria</description>
+			<pubDate>Wednesday 16th of October 2013 03:21:08 PM</pubDate>
 			<guid>item573</guid>
 		</item>
 	</channel>

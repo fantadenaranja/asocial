@@ -99,8 +99,10 @@
 				$_POST["p"]= eregi_replace("[\n|\r|\n\r]", ' ', $_POST["p"]); # removing shit
 				$_POST["p"] = preg_replace('/\s+/', ' ', $_POST["p"]); # removing shit
 				$_POST["p"] = htmlspecialchars($_POST["p"]); # removing shit
+				$cspost = md5($_POST["p"]);
+				
 				$pdate=date('l jS \of F Y h:i:s A'); # Pub date
-				fwrite($writep,"$nick;$pdate;$_POST[p]\n"); # writing post
+				fwrite($writep,"$nick;$pdate;$_POST[p];$cspost\n"); # writing post
 				fclose($writep);
 				if (file_exists($rss_file)) { # Determine if the file exists
 					$writer = fopen($rss_file,"w"); # Opening file to write inside
@@ -207,7 +209,7 @@
 			$texto = explode(";",$row);
 			if (empty($texto[0])) { 
 			}else{
-				echo "<tr><td align=\"left\"><img src=\"avatar.jpg\" class=\"img-rounded\"></td><td align=\"left\" width=\"100%\"><blockquote align=\"left\">$texto[2]<small><a href=\"$url\">$texto[0]</a> $texto[1]</small></blockquote></td></tr>";
+				echo "<tr><td align=\"left\"><img src=\"avatar.jpg\" class=\"img-rounded\"></td><td align=\"left\" width=\"100%\"><blockquote align=\"left\">$texto[2]<small><a href=\"$url\">$texto[0]</a> $texto[1] <a href=\"#$texto[3]\" title=\"MD5 checksum: $texto[3]\"><b> #</b></a></small></blockquote></td></tr>";
 			}
 			$numerolineas--;
 		}

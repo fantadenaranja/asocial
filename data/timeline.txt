@@ -1,1 +1,4 @@
 
+User;Wednesday 16th of October 2013 03:12:49 PM;guardando el tema y ahora a ver si lo puedo mostrar;Asocial node title;http://localhost
+User;Wednesday 16th of October 2013 03:15:39 PM;vale, se supone esto tiene un checksum;Asocial node title;http://localhost
+User;Wednesday 16th of October 2013 03:21:08 PM;el checksum podria formar parte del permalink. fechadepublicacion+hashmd5 identifican a cada post. Pero no. mejor no, es tonteria;Asocial node title;http://localhost

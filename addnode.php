@@ -53,7 +53,7 @@
 					while($i!=0){
 						$row = $lines[$i];
 						$text = explode(";",$row);
-						if ($text[0] == $_POST[a]) {
+						if ($text[1] == $title2[1] && $text[2] == $email2[1] && $text[3] == $nick2[1]) {
 							$counter++;
 						}
 						$i--;

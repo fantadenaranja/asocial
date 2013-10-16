@@ -94,7 +94,7 @@
 			
 			if ($status_time > 60) {
 			
-				$_POST["p"];
+				$_POST["p"] = substr($_POST['p'], 0, 300); # set limit to 300 characters
 				$writep = fopen($posts,"a");
 				$_POST["p"]= eregi_replace("[\n|\r|\n\r]", ' ', $_POST["p"]); # removing shit
 				$_POST["p"] = preg_replace('/\s+/', ' ', $_POST["p"]); # removing shit

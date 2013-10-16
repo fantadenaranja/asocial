@@ -4,7 +4,8 @@
 	
 	if (isset($_POST["key"])) { # Determine if a variable is set and is not NULL
 		if (empty($_POST["key"])) { # Determine if is either 0, empty, or not set at all
-		}else{			
+		}else{
+			$_POST["key"] = substr($_POST['key'], 0, 75); # set limit to 75 characters		
 			if ($_POST["key"] == "zapatero") {
 				session_start();
 				if (!isset($_SESSION["id"])){

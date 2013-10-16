@@ -9,4 +9,4 @@
 * hacer que el proceso de login, la clave este cifrada y al mismo tiempo no se pueda hacer fuerza bruta ataque.
 * detectar tiempo entre pings. Si alguien altera el code para publicar más rapido el ping llega antes de 60 segundos. Se desactivaria a esa persona que seguimos ya que esta no respetando las reglas para una buena conexión entre los nodos.
 * Hacer que cuando alguien publica una url esta luego salga linkeable.
-
+* titulo diferente cuando estas en timeline,home, amigos, login, seguir, ...

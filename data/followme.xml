@@ -5,14 +5,14 @@
 		<link>http://localhost</link>
 		<description>User feed rss asocial Asocial node title network</description>
 		<language>es-es</language>
-		<pubDate>Wednesday 16th of October 2013 03:21:08 PM</pubDate>
-		<lastBuildDate>Wednesday 16th of October 2013 03:21:08 PM</lastBuildDate>
+		<pubDate>Wednesday 16th of October 2013 03:29:03 PM</pubDate>
+		<lastBuildDate>Wednesday 16th of October 2013 03:29:03 PM</lastBuildDate>
 		<webMaster>username@domain.com</webMaster>
 		<item>
-			<title>User Wednesday 16th of October 2013 03:21:08 PM</title>
+			<title>User Wednesday 16th of October 2013 03:29:03 PM</title>
 			<link>http://localhost</link>
-			<description>el checksum podria formar parte del permalink. fechadepublicacion+hashmd5 identifican a cada post. Pero no. mejor no, es tonteria</description>
-			<pubDate>Wednesday 16th of October 2013 03:21:08 PM</pubDate>
+			<description>Ok. vamos a ver si ahora se puede publicar el tema :). quiero que esto ahora despues tenga ya por fin un id del post. eso será la propia fecha y al visitarse se verá en solitario.</description>
+			<pubDate>Wednesday 16th of October 2013 03:29:03 PM</pubDate>
 			<guid>item573</guid>
 		</item>
 	</channel>

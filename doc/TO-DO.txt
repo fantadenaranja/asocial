@@ -3,3 +3,4 @@
 * limitar cuando crece mucho los ficheros timeline.txt y posts.txt sistema rotar ficheros.
 * Si alguien publica con ; se descuringa el tema &#59; se pueden cambiar los separadores
 * gestionar followers, limitar un numero maximo y poder borrar.
+* si la url que se añade tiene / al final entra y es un jaleo luego. Se ha de controlar que de la url metida la / al final no se permita o se limpie

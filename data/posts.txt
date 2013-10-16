@@ -2,3 +2,4 @@
 User;Wednesday 16th of October 2013 03:12:49 PM;guardando el tema y ahora a ver si lo puedo mostrar;8d21f1a7f8a2f1da714c1845c1686713
 User;Wednesday 16th of October 2013 03:15:39 PM;vale, se supone esto tiene un checksum;51ab74fe53d3c4a0afcd90fc9680d858
 User;Wednesday 16th of October 2013 03:21:08 PM;el checksum podria formar parte del permalink. fechadepublicacion+hashmd5 identifican a cada post. Pero no. mejor no, es tonteria;651c52976c87f45d0e61b22d1fb07b50
+User;Wednesday 16th of October 2013 03:29:03 PM;Ok. vamos a ver si ahora se puede publicar el tema :). quiero que esto ahora despues tenga ya por fin un id del post. eso será la propia fecha y al visitarse se verá en solitario.;bbcf33747ecebfc024761b1119b54e2d

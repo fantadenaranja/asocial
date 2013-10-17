@@ -21,6 +21,7 @@
 					$_POST["a"]= eregi_replace("[\n|\r|\n\r]", ' ', $_POST["a"]); # removing shit
 					$_POST["a"] = preg_replace('/\s+/', ' ', $_POST["a"]); # removing shit
 					$_POST["a"] = htmlspecialchars($_POST["a"]); # removing shit
+					$_POST["a"] = rtrim($_POST["a"], "/"); # Remove Last Character from String if is a /
 					$remote_url = $_POST["a"];
 
 					

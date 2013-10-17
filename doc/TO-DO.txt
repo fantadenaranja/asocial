@@ -1,6 +1,6 @@
 * permalinks para los posts.
-* hacer que el avatar.png este en otro directorio y no en la raiz. por ejemplo dentro de ico
-* limitar los posts a 300 caracters
+* hacer que el avatar.png este en otro directorio y no en la raiz. por ejemplo dentro de data
+
 * limitar cuando crece mucho los ficheros timeline.txt y posts.txt sistema rotar ficheros.
 * Se tendría que comprobar que la url especificada en asocial.conf sea la que se mete en otro sitio. identica. Alguien podria usar un proxy para añadir un follower por primera vez y que tengamos a un follower al que luego de vuelta no podemos ofrecerle los datos.
 * gestionar followers, limitar un numero maximo y poder borrar.

@@ -1,10 +1,10 @@
-* permalinks para los posts.
+
 * hacer que el avatar.png este en otro directorio y no en la raiz. por ejemplo dentro de data
 
 * limitar cuando crece mucho los ficheros timeline.txt y posts.txt sistema rotar ficheros.
 * Se tendría que comprobar que la url especificada en asocial.conf sea la que se mete en otro sitio. identica. Alguien podria usar un proxy para añadir un follower por primera vez y que tengamos a un follower al que luego de vuelta no podemos ofrecerle los datos.
 * gestionar followers, limitar un numero maximo y poder borrar.
-* si la url que se añade tiene / al final entra y es un jaleo luego. Se ha de controlar que de la url metida la / al final no se permita o se limpie
+
 * comprobar si existen ficheros o se tiene acceso a ellos. A todos los del directorio data.
 * hacer que el proceso de login, la clave este cifrada y al mismo tiempo no se pueda hacer fuerza bruta ataque.
 * detectar tiempo entre pings. Si alguien altera el code para publicar más rapido el ping llega antes de 60 segundos. Se desactivaria a esa persona que seguimos ya que esta no respetando las reglas para una buena conexión entre los nodos.

@@ -8,6 +8,7 @@
 		session_destroy();
 	}
 	
+
 	if (isset($_GET["ping"])) { # Ping for update timeline
 		if (empty($_GET["ping"])) { # Determine if is either 0, empty, or not set at all
 		}else{	
@@ -100,14 +101,18 @@
 				$_POST["p"] = preg_replace('/\s+/', ' ', $_POST["p"]); # removing shit
 				$_POST["p"] = htmlspecialchars($_POST["p"]); # removing shit
 				$cspost = md5($_POST["p"]);
-				
+				$permalinkid=date('dmYhis');
 				$pdate=date('l jS \of F Y h:i:s A'); # Pub date
-				fwrite($writep,"$nick|$pdate|$_POST[p]|$cspost\n"); # writing post
+				fwrite($writep,"$nick|$pdate|$_POST[p]|$cspost|$permalinkid\n"); # writing post
 				fclose($writep);
+				$writeperma = fopen("./data/permalinks/$permalinkid.txt","w");
+				fwrite($writeperma,"$nick|$pdate|$_POST[p]|$cspost|$permalinkid\n"); # writing permalink
+				fclose($writeperma);
+				
 				if (file_exists($rss_file)) { # Determine if the file exists
 					$writer = fopen($rss_file,"w"); # Opening file to write inside
 					$rdate=date('l jS \of F Y h:i:s A'); # Pub rss date
-					fwrite($writer, "<?xml version=\"1.0\"?>\n<rss version=\"2.0\">\n\t<channel>\n\t\t<title>$title</title>\n\t\t<link>$url</link>\n\t\t<description>$nick feed rss asocial $title network</description>\n\t\t<language>es-es</language>\n\t\t<pubDate>$rdate</pubDate>\n\t\t<lastBuildDate>$rdate</lastBuildDate>\n\t\t<webMaster>$email</webMaster>\n\t\t<item>\n\t\t\t<title>$nick $pdate</title>\n\t\t\t<link>$url</link>\n\t\t\t<description>$_POST[p]</description>\n\t\t\t<pubDate>$pdate</pubDate>\n\t\t\t<guid>item573</guid>\n\t\t</item>\n\t</channel>\n</rss>");		
+					fwrite($writer, "<?xml version=\"1.0\"?>\n<rss version=\"2.0\">\n\t<channel>\n\t\t<title>$title</title>\n\t\t<link>$url</link>\n\t\t<description>$nick feed rss asocial $title network</description>\n\t\t<language>es-es</language>\n\t\t<pubDate>$rdate</pubDate>\n\t\t<lastBuildDate>$rdate</lastBuildDate>\n\t\t<webMaster>$email</webMaster>\n\t\t<item>\n\t\t\t<title>$nick $pdate</title>\n\t\t\t<link>$url</link>\n\t\t\t<description>$_POST[p]</description>\n\t\t\t<pubDate>$pdate</pubDate>\n\t\t\t<guid>$permalinkid</guid>\n\t\t</item>\n\t</channel>\n</rss>");		
 					fclose($writer); 
 				}
 				
@@ -185,7 +190,37 @@
 
     <div class="container">
 		
-		<?php
+	<?php	
+	if (isset($_GET["pid"])) {
+		if (empty($_GET["pid"])) { # Determine if is either 0, empty, or not set at all
+		}else{
+			$_GET["pid"] = substr($_GET['pid'], 0, 14); # set limit to 14 characters
+			$nc = strlen($_GET["pid"]); # counting string characters
+			if ($nc != 14) {
+			}else{
+				$_GET["pid"]= eregi_replace("[\n|\r|\n\r]", ' ', $_GET["pid"]); # removing shit
+				$_GET["pid"] = preg_replace('/\s+/', ' ', $_GET["pid"]); # removing shit
+				$_GET["pid"] = htmlspecialchars($_GET["pid"]); # removing shit
+				$numeric = is_numeric($_GET[pid]); # is numeric?
+				if ($numeric != 1) { # checking if is numeric
+				}else{
+					$permalink_file= "./data/permalinks/$_GET[pid].txt";
+					$handle = @fopen($permalink_file, "r");
+					if ($handle === false) {
+					echo "<p class=\"text-error\" align=\"center\">$_GET[pid] is not a right permalink id or the content was deleted</p>";
+					}else{
+						$fil=file("$permalink_file");
+						$row = $fil[0];
+						$dat = explode("|",$row);
+						echo "<table align=\"left\" width=\"100%\">";
+						echo "<tr><td align=\"left\"><img src=\"avatar.jpg\" class=\"img-rounded\"></td><td align=\"left\" width=\"100%\"><blockquote align=\"left\">$dat[2]<small><a href=\"$url\">$dat[0]</a> <a href=\"index.php?pid=$dat[4]\">$dat[1]</a> <a href=\"#$dat[3]\" title=\"MD5 checksum: $dat[3]\"><b> #</b></a></small></blockquote></td></tr>";
+						echo "</table>";
+					}
+				}
+			}	
+		}
+	}else{
+
 		if (!isset($_SESSION["id"])){
 		}else{
 			?>
@@ -200,16 +235,16 @@
 		$lineas=file('./data/posts.txt');
 		$numerolineas=count($lineas);
 		$postpag=$numerolineas-10; # post per page
-		
-		
+					
+					
 		echo "<table align=\"left\" width=\"100%\">";
-		
+					
 		while($numerolineas>$postpag && $numerolineas!=0){
 			$row = $lineas[$numerolineas];
 			$texto = explode("|",$row);
 			if (empty($texto[0])) { 
 			}else{
-				echo "<tr><td align=\"left\"><img src=\"avatar.jpg\" class=\"img-rounded\"></td><td align=\"left\" width=\"100%\"><blockquote align=\"left\">$texto[2]<small><a href=\"$url\">$texto[0]</a> $texto[1] <a href=\"#$texto[3]\" title=\"MD5 checksum: $texto[3]\"><b> #</b></a></small></blockquote></td></tr>";
+				echo "<tr><td align=\"left\"><img src=\"avatar.jpg\" class=\"img-rounded\"></td><td align=\"left\" width=\"100%\"><blockquote align=\"left\">$texto[2]<small><a href=\"$url\">$texto[0]</a> <a href=\"index.php?pid=$texto[4]\">$texto[1]</a> <a href=\"#$texto[3]\" title=\"MD5 checksum: $texto[3]\"><b> #</b></a></small></blockquote></td></tr>";
 			}
 			$numerolineas--;
 		}
@@ -218,7 +253,8 @@
 		}else{
 		}
 		echo "</table>";
-		?>		
+	}
+	?>		
 
     </div> <!-- /container -->
 

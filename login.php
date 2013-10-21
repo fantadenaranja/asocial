@@ -6,7 +6,7 @@
 		if (empty($_POST["key"])) { # Determine if is either 0, empty, or not set at all
 		}else{
 			$_POST["key"] = substr($_POST['key'], 0, 50); # set limit to 50 characters		
-			if ($_POST["key"] == "zapatero") {
+			if ($_POST["key"] == "BailarPega2") {
 				session_start();
 				if (!isset($_SESSION["id"])){
 					$_SESSION["id"] = Session_id();

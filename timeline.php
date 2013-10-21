@@ -63,7 +63,7 @@
 		<?php
 		$lineas=file('./data/timeline.txt');
 		$numerolineas=count($lineas);
-		$postpag=$numerolineas-10; # post on timeline per page
+		$postpag=$numerolineas-7; # post on timeline per page
 		
 		echo "<table align=\"left\" width=\"100%\">";
 		
@@ -75,10 +75,6 @@
 				echo "<tr><td align=\"left\"><a href=\"$texto[4]\"><img src=\"$texto[4]/avatar.jpg\" class=\"img-rounded\" title=\"$texto[3]\"></a></td><td align=\"left\" width=\"100%\"><blockquote align=\"left\">$texto[2]<small><a href=\"$texto[4]\">$texto[0]</a> $texto[1]</small></blockquote></td></tr>";
 			}
 			$numerolineas--;
-		}
-		if ($numerolineas > 0) { # show link to load more if we really have more posts
-			echo "<tr><td align=\"left\">&nbsp;</td><td align=\"left\" width=\"100%\"><p align=\"center\"><a href=\"#\"><img src=\"ico/16px/16_refresh.png\"> Cargar más</a></p></td></tr>";
-		}else{
 		}
 		echo "</table>";
 

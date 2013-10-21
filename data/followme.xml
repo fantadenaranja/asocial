@@ -5,15 +5,15 @@
 		<link>http://localhost</link>
 		<description>User feed rss asocial Asocial node title network</description>
 		<language>es-es</language>
-		<pubDate>Monday 21st of October 2013 05:25:53 AM</pubDate>
-		<lastBuildDate>Monday 21st of October 2013 05:25:53 AM</lastBuildDate>
+		<pubDate>Monday 21st of October 2013 06:56:20 AM</pubDate>
+		<lastBuildDate>Monday 21st of October 2013 06:56:20 AM</lastBuildDate>
 		<webMaster>username@domain.com</webMaster>
 		<item>
-			<title>User Monday 21st of October 2013 05:25:53 AM</title>
+			<title>User Monday 21st of October 2013 06:56:20 AM</title>
 			<link>http://localhost</link>
-			<description>hola mundo</description>
-			<pubDate>Monday 21st of October 2013 05:25:53 AM</pubDate>
-			<guid>21102013052553</guid>
+			<description>Hello world :).</description>
+			<pubDate>Monday 21st of October 2013 06:56:20 AM</pubDate>
+			<guid>21102013065620</guid>
 		</item>
 	</channel>
 </rss>

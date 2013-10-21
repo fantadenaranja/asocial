@@ -18,7 +18,7 @@
 			$texto = explode("|",$row);
 			if (empty($texto[0])) { 
 			}else{
-				echo "<li><table align=\"left\" width=\"100%\"><tr><td align=\"left\"><img src=\"avatar.jpg\" class=\"img-rounded\"></td><td align=\"left\" width=\"100%\"><blockquote align=\"left\">$numerolineas - $texto[2]<small><a href=\"$url\">$texto[0]</a> <a href=\"index.php?pid=$texto[4]\">$texto[1]</a> <a href=\"#$texto[3]\" title=\"MD5 checksum: $texto[3]\"><b> #</b></a></small></blockquote><a id=\"p$numerolineas\"></td></tr></table></li>";
+				echo "<li><table align=\"left\" width=\"100%\"><tr><td align=\"left\"><img src=\"avatar.jpg\" class=\"img-rounded\"></td><td align=\"left\" width=\"100%\"><blockquote align=\"left\">$texto[2]<small><a href=\"$url\">$texto[0]</a> <a href=\"index.php?pid=$texto[4]\">$texto[1]</a> <a href=\"#$texto[3]\" title=\"MD5 checksum: $texto[3]\"><b> #</b></a></small></blockquote><a id=\"p$numerolineas\"></td></tr></table></li>";
 			}
 			$numerolineas--;
 		}

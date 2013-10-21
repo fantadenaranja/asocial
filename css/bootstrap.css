@@ -7,6 +7,10 @@
  *
  * Designed and built with all the love in the world @twitter by @mdo and @fat.
  */
+ 
+#infinite_scroll{height:250px;overflow-y:hidden;overflow-x:hidden;margin-top:0px;border:0px;padding:0px;}
+
+.loading{text-align:right;margin-top:-100px}
 
 .clearfix {
   *zoom: 1;
@@ -228,6 +232,8 @@ body {
   line-height: 20px;
   color: #333333;
   background-color: #ffffff;
+  overflow-x:hidden;
+  overflow-y:hidden;
 }
 
 a {

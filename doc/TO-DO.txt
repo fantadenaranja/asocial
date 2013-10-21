@@ -1,4 +1,4 @@
-
+* palabra larga partirla
 * hacer que el avatar.png este en otro directorio y no en la raiz. por ejemplo dentro de data
 
 * limitar cuando crece mucho los ficheros timeline.txt y posts.txt sistema rotar ficheros.
